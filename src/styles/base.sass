@@ -37,15 +37,18 @@ html,body,div,h1,h2,h3,h4,h5,h6,img
     bottom: 0
     right: 0
     left: 0
+.top
+    min-height: 100%
 .container
     max-width: 1024px
     margin: 0 auto
 .header
     font-size: 25px
     font-weight: bold
-    margin-top: 15px
+    padding-top: 15px
     margin-bottom: 20px
 .footer
+    position: relative
     background: variables.$secondary-bg
     color: variables.$secondary
     padding: 10px 0
@@ -133,6 +136,10 @@ html,body,div,h1,h2,h3,h4,h5,h6,img
         margin: 10px
     .float-left
         flex: 0 0 100%
+    .container
+        margin-bottom:130px
     .footer
         text-align: center
         padding-left: 0
+        height: 50px
+        margin-top: -65px

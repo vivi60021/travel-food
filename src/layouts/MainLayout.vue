@@ -1,5 +1,6 @@
 <template>
   <div id="layout" class="fixed-full fullscreen" style="position: relative">
+    <div class="top">
     <div class="text-center header">農村地方美食小吃特色料理</div>
     <div class="container row">
       <div class="float-left">
@@ -14,6 +15,7 @@
           :src="imgRequire(`${img.name}.${img.extension}`)"
         />
       </div>
+    </div>
     </div>
     <div class="footer">
       <h4>CMoney 全曜財經資訊</h4>
