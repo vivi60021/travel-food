@@ -1,0 +1,138 @@
+@use 'variables'
+body
+    font-family: Arial
+    background: variables.$primary-bg
+    letter-spacing: 2px
+html,body,div,h1,h2,h3,h4,h5,h6,img
+    margin: 0
+    pading: 0
+    border: 0
+.row
+    display: flex
+    flex-wrap: wrap
+.column
+    display: flex
+    flex-wrap: wrap
+    flex-direction: column
+.space
+    flex-grow: 1
+.text-center
+    text-align: center
+.text-ellipsis
+    height: 100%
+    line-height: 2
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+    display: -webkit-box
+    -webkit-line-clamp: 1
+    -webkit-box-orient: vertical
+    white-space: normal
+.fullscreen
+    height: 100vh
+    width: 100vw
+    z-index: 6000
+.fixed-full
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+.container
+    max-width: 1024px
+    margin: 0 auto
+.header
+    font-size: 25px
+    font-weight: bold
+    margin-top: 15px
+    margin-bottom: 20px
+.footer
+    background: variables.$secondary-bg
+    color: variables.$secondary
+    padding: 10px 0
+    padding-left: 14vw
+.float-left
+    flex: 0 0 75%
+.advs
+    display: block
+    width: 200px
+    margin-left: 10px
+.imgs
+    margin-bottom: 5px
+    width: 200px
+    display: block
+    padding: 0
+
+.imgs-end
+    position: sticky
+    height: auto !important
+    top: 30px
+.selects
+    font-size: 16px
+    background: variables.$secondary
+    border: none
+    cursor: pointer
+    user-select: none
+    width: 15vw
+    height: 30px
+    appearance: none
+    margin-right: 10px
+    padding-left: 10px
+.view-list
+    color: variables.$secondary-bg
+    & span
+        cursor: pointer
+        display: table-cell
+        vertical-align: middle
+        margin: 0 5px
+    .selected
+        color: black
+        cursor: none
+.home-page
+    font-size: 12px
+    margin: 10px 0
+    text-align: justify
+.pagination
+    margin: 0px
+    display: inline-block
+    & li
+        display: inline
+    & li button
+        color: variables.$secondary-bg
+        background: variables.$secondary
+        float: center
+        padding: 8px 12px
+        transition: background-color .3s
+        border: none
+        margin: 4px
+    & li button.active
+        background: variables.$primary
+        color: white
+
+@keyframes loading-spinner
+    0%
+        transform: scaleX(0)
+    50%
+        transform: scaleX(100%)
+    100%
+        transform: scaleX(0)
+
+@media only screen and (max-width: 840px)
+    .small-display-none
+        display: none
+    .small-display-show
+        display: flex
+    .small-row
+        flex-direction: row
+    .small-center
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+    .selects
+        width: 100%
+        margin: 10px
+    .float-left
+        flex: 0 0 100%
+    .footer
+        text-align: center
+        padding-left: 0

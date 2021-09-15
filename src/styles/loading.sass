@@ -1,0 +1,30 @@
+.loading
+    display: block
+    position: fixed
+    z-index: 666
+    .full
+        z-index: -1
+        background: #000000bd
+        text-align: center
+        position: fixed
+        pointer-events: all
+        outline: 0
+    .content
+        position: absolute
+        top: calc(50% - 50px)
+        .icon
+            margin: 0 auto
+            color: white
+            animation: loading-spinner 3s 0s cubic-bezier(.09,.57,.49,.9) infinite
+        .text
+            color: white
+
+@keyframes loading-spinner
+    0%
+        transform: perspective(100px) rotateX(0) rotateY(0)
+
+    50%
+        transform: perspective(100px) rotateX(0) rotateY(180deg)
+
+    100%
+        transform: perspective(100px) rotateX(0) rotateY(360deg)
